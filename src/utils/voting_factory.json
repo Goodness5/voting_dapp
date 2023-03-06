@@ -1,0 +1,27 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "contract Ballot",
+        "name": "_child",
+        "type": "address"
+      }
+    ],
+    "name": "child",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      { "internalType": "string", "name": "_name", "type": "string" },
+      { "internalType": "string[]", "name": "_contenders", "type": "string[]" },
+      { "internalType": "uint256", "name": "_period", "type": "uint256" },
+      { "internalType": "uint8", "name": "_tokenPerVote", "type": "uint8" }
+    ],
+    "name": "createBallot",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]
