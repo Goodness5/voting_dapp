@@ -59,7 +59,6 @@ function App() {
     args: [[voter1, voter2, voter3]],
   });
 
-  
   const {
     data: winnerName,
     isLoading: winnerIsLoading,
@@ -94,38 +93,29 @@ function App() {
   useEffect(() => {
     if (voteFactoryData) {
       console.log(voteFactoryData);
-      setLoading(loading)
+      setLoading(loading);
+    } else {
+      setLoading(!loading);
     }
-    else{
-      setLoading(!loading)}
   }, [voteFactoryData]);
-
-
 
   useEffect(() => {
     if (ballotName) {
       console.log(ballotName);
-      setLoading(loading)
+      setLoading(loading);
+    } else {
+      setLoading(!loading);
     }
-    else{
-      setLoading(!loading)}
   }, [ballotName]);
-
-
-
 
   useEffect(() => {
     if (winnerName) {
       console.log(winnerName);
-      setLoading(loading)
-    }
-    else{
-      setLoading(!loading)
+      setLoading(loading);
+    } else {
+      setLoading(!loading);
     }
   }, [winnerName]);
-
-  
-
 
   return (
     <div className="App">
