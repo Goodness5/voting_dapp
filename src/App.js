@@ -212,7 +212,7 @@ function App() {
         <button type="submit">Place Votes</button>
       </form>
 
-      <button onClick=></button>
+      <button onClick={winner}></button>
     </div>
   );
 }
