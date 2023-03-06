@@ -59,6 +59,7 @@ function App() {
     args: [[voter1, voter2, voter3]],
   });
 
+  
   const {
     data: winnerName,
     isLoading: winnerIsLoading,
@@ -69,6 +70,7 @@ function App() {
     functionName: "winner",
     args: [[]],
   });
+  const winner = winnerName;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -124,7 +126,7 @@ function App() {
 
   
 
-  
+
   return (
     <div className="App">
       <ConnectionButton />
@@ -219,6 +221,8 @@ function App() {
         </div>
         <button type="submit">Place Votes</button>
       </form>
+
+      <button onClick={winner}></button>
     </div>
   );
 }
