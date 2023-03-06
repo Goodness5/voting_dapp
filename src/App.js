@@ -32,13 +32,22 @@ function App() {
   const {data: voteFactoryData, isLoading: voteFactoryIsLoading, write: createBallot} = useContractWrite(config)
 
 
-
+  const [voter1, setvoter1] = useState("");
+  const [voter2, setvoter2] = useState("");
+  const [voter3, setvoter3] = useState("");
 
   const {data: ballotName, isLoading: ballotIsLoading, isError: ballotIsError} = useContractRead({
     address: "0x789b976e837d7c0fae59d4e7cbdc86a56364cb68",
     abi: Ballot_Abi,
-    functionName: 'name'
+    functionName: 'name',
+    args: [
+      name,
+      [contenders1, contenders2, contenders3],
+      period,
+      tokenPerVote,
+    ],
   })
+
 
 
 
@@ -131,6 +140,36 @@ function App() {
 
 
         <button type="submit">Submit</button>
+      </form>
+
+
+<form>
+      <div className="vote">
+      <label>candidate1:</label>
+          <input
+          type="text"
+          placeholder="enter first candidate"
+          onChange={(e) => setvoter1(e.target.value)}
+          />
+      </div>
+      <div className="vote">
+      <label>candidate2:</label>
+          <input
+          type="text"
+          placeholder="enter second candidate"
+          onChange={(e) => setvoter2(e.target.value)}
+          />
+      </div>
+      <div className="vote">
+      <label>candidate3:</label>
+          <input
+          type="text"
+          placeholder="enter third candidate"
+          onChange={(e) => setvoter3(e.target.value)}
+          />
+      </div>
+      <button type="submit">Place Votes</button>
+
       </form>
     </div>
   );
