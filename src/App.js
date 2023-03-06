@@ -60,6 +60,7 @@ function App() {
       [voter1, voter2, voter3]
     ],
   });
+  const vote = ballotName.functionName;
 
   const {
     data: winnerName,
