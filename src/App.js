@@ -56,7 +56,9 @@ function App() {
     address: "0x789b976e837d7c0fae59d4e7cbdc86a56364cb68",
     abi: Ballot_Abi,
     functionName: "vote",
-    args: [[voter1, voter2, voter3]],
+    args: [
+      [voter1, voter2, voter3]
+    ],
   });
 
   const {
@@ -212,7 +214,7 @@ function App() {
         <button type="submit">Place Votes</button>
       </form>
 
-      <button onClick={winner}></button>
+      <div>{`winner is: ${winner}`}</div>
     </div>
   );
 }
