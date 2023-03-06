@@ -90,6 +90,22 @@ function App() {
     }, 1000);
   };
 
+  const handleVote = (e) => {
+    e.preventDefault();
+
+    setTimeout(() => {
+      console.log({
+        
+        voter1,
+        voter2,
+        voter3,
+      });
+
+      vote?.();
+    }, 1000);
+  };
+
+  
   // 0x789b976e837d7c0fae59d4e7cbdc86a56364cb68
 
   useEffect(() => {
