@@ -1,0 +1,9 @@
+1. Complete the create ballot function such that you wait for the 
+    transaction on the blockchain to get it's status.
+
+2. Interact with the vote function, such that voters can vote for 
+    their prefered candidates. Also wait for the transaction.
+
+3. Interact with the winner() function.
+
+4. Set loading state on the submit button.
