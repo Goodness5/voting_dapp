@@ -60,7 +60,7 @@ function App() {
       [voter1, voter2, voter3]
     ],
   });
-  const vote = ballotName.functionName;
+  // const vote = ballotName.functionName;
 
   const {
     data: winnerName,
@@ -102,7 +102,7 @@ function App() {
         voter3,
       });
 
-      vote?.();
+      ballotName?.();
     }, 1000);
   };
 
@@ -140,57 +140,64 @@ function App() {
     <div className="App">
       <ConnectionButton />
 
-      <form onSubmit={handleSubmit}>
-        <div className="">
+      <form onSubmit={handleSubmit} className="" >
+      <div className="form">
+        <div className="bastard my-0.5">
           <label>Vote Name</label>
           <input
             type="text"
             placeholder="Name of Vote Campaign"
             onChange={(e) => setName(e.target.value)}
+            className="bg-gray-50 border border-blue-300 w-30px rounded-lg p-2 text-black"
           />
         </div>
-        <div className="">
+        <div className="bastard my-0.5">
           <label>Contenders 1</label>
           <input
             type="text"
             placeholder="Name of Vote Campaign"
             onChange={(e) => setContenders1(e.target.value)}
+            className="bg-gray-50 border border-gray-200  w-flex rounded-lg p-2 text-blackk"
           />
         </div>
-        <div className="">
+        <div className="bastard my-0.5">
           <label>Contenders 2</label>
           <input
             type="text"
             placeholder="Name of Vote Campaign"
             onChange={(e) => setContenders2(e.target.value)}
+            className="bg-gray-50 border border-gray-300  w-flex rounded-lg p-2 text-black"
           />
         </div>
-        <div className="">
+        <div className="bastard my-0.5">
           <label>Contenders 3</label>
           <input
             type="text"
             placeholder="Name of Vote Campaign"
             onChange={(e) => setContenders3(e.target.value)}
+            className="bg-gray-50 border-gray-300  w-flex rounded-lg p-2 text-black"
           />
         </div>
-        <div className="">
+        <div className="bastard my-0.5">
           <label>Vote Period</label>
           <input
             type="number"
             placeholder="Set Vote Period in seconds"
             onChange={(e) => setPeriod(e.target.value)}
+            className="bg-gray-50 border border-gray-300  w-flex rounded-lg p-2 text-black"
           />
         </div>
-        <div className="">
-          <label>Token Per Vote</label>
+        <div className="bastard my-0.5">
+          <label>Token Per Vote:</label>
           <input
             type="number"
             placeholder="Set token amount used in voting"
             onChange={(e) => setTokenPerVote(e.target.value)}
+            className="bg-gray-50 border border-gray-300  w-flex rounded-lg p-2 text-black"
           />
         </div>
 
-        <button type="submit" onClick={() => setLoading(!loading)}>
+        <button type="submit" onClick={() => setLoading(!loading)} className="p-2 bg-blue-500 border border-black rounded-lg w-40 my-6 btn-sbt">
           Submit
         </button>
         <ClipLoader
@@ -201,9 +208,11 @@ function App() {
           aria-label="Loading Spinner"
           data-testid="loader"
         />
+        </div>
       </form>
+      
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleVote}>
         <div className="vote">
           <label>candidate1:</label>
           <input

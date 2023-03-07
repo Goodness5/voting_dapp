@@ -1,3 +1,9 @@
+/* @tailwind base;
+
+@tailwind components;
+
+@tailwind utilities; */
+
 .App {
   text-align: center;
 }
@@ -35,4 +41,36 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.form{
+  background-color: #708FE664;
+  border:#000000 1px solid;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  align-items: center;
+  text-align: center;
+  border-radius: 2em;
+}
+
+.bastard{
+  text-align: center;
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  
+}
+.bastard>input{
+  margin-top: 3%;
+}
+.btn-sbt:hover{
+  background-color: rgba(223, 238, 255, 0.733);
+  border-color: #2e02f3;
+  border: solid black 1px;
+  color: rgb(82, 67, 67);
 }
