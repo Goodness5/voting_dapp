@@ -43,7 +43,7 @@
   }
 }
 
-.form{
+/* .form{
   background-color: #708FE664;
   border:#000000 1px solid;
   width: 80%;
@@ -54,20 +54,20 @@
   align-items: center;
   text-align: center;
   border-radius: 2em;
-}
+} */
 
-.bastard{
+/* .bastard{
   text-align: center;
-  /* background-color: blue; */
+  background-color: blue;
   display: flex;
   flex-direction: column;
   justify-items: center;
   align-items: center;
   
-}
-.bastard>input{
+} */
+/* .bastard>input{
   margin-top: 3%;
-}
+} */
 .btn-sbt:hover{
   background-color: rgba(223, 238, 255, 0.733);
   border-color: #2e02f3;

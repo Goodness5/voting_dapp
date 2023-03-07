@@ -157,7 +157,7 @@ function App() {
             type="text"
             placeholder="Name of Vote Campaign"
             onChange={(e) => setContenders1(e.target.value)}
-            className="bg-gray-50 border border-gray-200  w-flex rounded-lg p-2 text-blackk"
+            className="bg-gray-50 border border-blue-300  w-flex rounded-lg p-2 text-blackk"
           />
         </div>
         <div className="bastard my-0.5">
@@ -166,7 +166,7 @@ function App() {
             type="text"
             placeholder="Name of Vote Campaign"
             onChange={(e) => setContenders2(e.target.value)}
-            className="bg-gray-50 border border-gray-300  w-flex rounded-lg p-2 text-black"
+            className="bg-gray-50 border border-blue-300  w-flex rounded-lg p-2 text-black"
           />
         </div>
         <div className="bastard my-0.5">
@@ -174,8 +174,8 @@ function App() {
           <input
             type="text"
             placeholder="Name of Vote Campaign"
-            onChange={(e) => setContenders3(e.target.value)}
-            className="bg-gray-50 border-gray-300  w-flex rounded-lg p-2 text-black"
+            onChange={(e) => setContenders2(e.target.value)}
+            className="bg-gray-50 border border-blue-300  w-flex rounded-lg p-2 text-black"
           />
         </div>
         <div className="bastard my-0.5">
@@ -184,7 +184,7 @@ function App() {
             type="number"
             placeholder="Set Vote Period in seconds"
             onChange={(e) => setPeriod(e.target.value)}
-            className="bg-gray-50 border border-gray-300  w-flex rounded-lg p-2 text-black"
+            className="bg-gray-50 border border-blue-300  w-flex rounded-lg p-2 text-black"
           />
         </div>
         <div className="bastard my-0.5">
@@ -193,7 +193,7 @@ function App() {
             type="number"
             placeholder="Set token amount used in voting"
             onChange={(e) => setTokenPerVote(e.target.value)}
-            className="bg-gray-50 border border-gray-300  w-flex rounded-lg p-2 text-black"
+            className="bg-gray-50 border border-blue-300  w-flex rounded-lg p-2 text-black"
           />
         </div>
 
