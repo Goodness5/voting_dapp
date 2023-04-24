@@ -79,35 +79,41 @@ const ListOfBallot = () => {
   }, [ballots]);
 
   return (
-    <div className="mt-10">
-      {ballotLoading || ballotNameLoading ? (
-        <div className="text-center">THE PAGE IS LOADING!</div>
-      ) : (
-        <div className="grid grid-cols-4 gap-5">
-          {ballotVoteName.map((ballot, _i) => {
-            return (
-              <Link
-                to={`${ballot.address}`}
-                key={_i}
-                className="col-span-1 border border-teal-400 rounded-xl p-4 mb-4 cursor-pointer"
-              >
-                <div className="flex">
-                  Name: <span className="">{ballot.ballotName}</span>
-                </div>
-                <div className="flex">
-                  Address:{" "}
-                  <span className="">{`${ballot.address.slice(
-                    0,
-                    6
-                  )}...${ballot.address.slice(-4)}`}</span>
-                </div>
-              </Link>
-            );
-          })}
+
+    function HomePage({ ballotLoading, ballotNameLoading, ballotVoteName }) {
+      return (
+        <div className="container mx-auto px-6 py-12">
+          <h1 className="text-4xl font-bold mb-10">Welcome to My Voting App!</h1>
+          <div className="grid grid-cols-3 gap-8">
+            {ballotLoading || ballotNameLoading ? (
+              <div className="text-center col-span-3">
+                Loading ballot data...
+              </div>
+            ) : (
+              <>
+                {ballotVoteName.map((ballot, index) => (
+                  <div
+                    key={index}
+                    className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 ease-in-out"
+                  >
+                    <Link to={`${ballot.address}`}>
+                      <div className="p-4">
+                        <h2 className="text-2xl font-bold mb-2">
+                          Ballot Name: {ballot.ballotName}
+                        </h2>
+                        <p className="text-gray-700">
+                          Address: {`${ballot.address.slice(0, 6)}...${ballot.address.slice(-4)}`}
+                        </p>
+                      </div>
+                    </Link>
+                  </div>
+                ))}
+              </>
+            )}
+          </div>
         </div>
-      )}
-    </div>
-  );
-};
+      );
+    }
+  )};
 
 export default ListOfBallot;

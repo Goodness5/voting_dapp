@@ -100,61 +100,62 @@ const BallotDetails = () => {
   console.log("winnerData: ", winnerData);
 
   return (
-    <div className="">
-      <div className="flex items-center justify-between mt-10 px-8">
-        <div>
-          <div className="">Ballot Name: {ballots}</div>
+<div className="bg-gray-800 text-white p-8">
+  <div className="flex items-center justify-between mt-10 px-8">
+    <div>
+      <div className="text-xl mb-4">Ballot Name: {ballots}</div>
 
-          <form onSubmit={handleSubmit}>
-            <div className="mb-4">
-              <label className="block">Contender 1</label>
-              <input
-                type="text"
-                className="p-2 border border-orange-400"
-                placeholder="Contender 1"
-                onChange={(e) => setContender1(e.target.value)}
-              />
-            </div>
-            <div className="mb-4">
-              <label className="block">Contender 2</label>
-              <input
-                type="text"
-                className="p-2 border border-orange-400"
-                placeholder="Contender 2"
-                onChange={(e) => setContender2(e.target.value)}
-              />
-            </div>
-            <div className="mb-4">
-              <label className="block">Contender 3</label>
-              <input
-                type="text"
-                className="p-2 border border-orange-400"
-                placeholder="Contender 3"
-                onChange={(e) => setContender3(e.target.value)}
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="px-7 py-2 border border-blue-300 rounded-lg"
-            >
-              {isLoadingBallotData ||
-              isLoadingBallotWaitData ||
-              voteIsLoading ||
-              voteIsLoadingWaitData
-                ? "LOADING..."
-                : "Vote"}
-            </button>
-          </form>
+      <form onSubmit={handleSubmit}>
+        <div className="mb-4">
+          <label className="block text-lg mb-2">Contender 1</label>
+          <input
+            type="text"
+            className="p-2 border border-orange-400 rounded-lg w-64"
+            placeholder="Contender 1"
+            onChange={(e) => setContender1(e.target.value)}
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-lg mb-2">Contender 2</label>
+          <input
+            type="text"
+            className="p-2 border border-orange-400 rounded-lg w-64"
+            placeholder="Contender 2"
+            onChange={(e) => setContender2(e.target.value)}
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-lg mb-2">Contender 3</label>
+          <input
+            type="text"
+            className="p-2 border border-orange-400 rounded-lg w-64"
+            placeholder="Contender 3"
+            onChange={(e) => setContender3(e.target.value)}
+          />
         </div>
 
-        <BuyToken />
-      </div>
-
-      <div className="flex justify-center items-center">
-        {/* <button type="submit" onClick={}>CheckWinner</button> */}
-      </div>
+        <button
+          type="submit"
+          className="px-7 py-2 border border-blue-300 rounded-lg mr-4"
+        >
+          {isLoadingBallotData ||
+          isLoadingBallotWaitData ||
+          voteIsLoading ||
+          voteIsLoadingWaitData
+            ? "LOADING..."
+            : "Vote"}
+        </button>
+      </form>
     </div>
+
+    <BuyToken />
+  </div>
+
+  <div className="flex justify-center items-center">
+    {/* <button type="submit" onClick={}>CheckWinner</button> */}
+  </div>
+</div>
+
   );
 };
 
